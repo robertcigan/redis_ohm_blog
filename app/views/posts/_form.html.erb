@@ -1,0 +1,17 @@
+<%= form_tag("/posts", :method => :post) do |f| %>
+  <div class="field">
+    <%= label_tag :post_title %><br />
+    <%= text_field_tag "post[title]", @post.title %>
+  </div>
+  <div class="field">
+    <%= label_tag :post_content %><br />
+    <%= text_area_tag "post[content]", @post.content %>
+  </div>
+  <div class="field">
+    <%= label_tag :post_author %><br />
+    <%= text_field_tag "post[author]", @post.author %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Save" %>
+  </div>
+<% end %>
